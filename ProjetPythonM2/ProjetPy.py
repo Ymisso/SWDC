@@ -42,7 +42,7 @@ def Parse_and_Constructor(pdbfile):
     for line in pdbfile:
         infoATOM = line.split()
         if infoATOM[0] == "ATOM": 
-            atom=Atom(infoATOM[1], infoATOM[2], infoATOM[3], infoATOM[4], infoATOM[5],
+            atom=Atom(infoATOM[1], infoATOM[2], infoATOM[3], infoATOM[4], infoATOM[5], \
                         infoATOM[6], infoATOM[7], infoATOM[8])
             ListAtom.append(atom)
 
@@ -74,10 +74,11 @@ def Select_Hbond(ListAtom, ATOM_hydro):
     """
     Sélectionne la liste des atomes donneurs et accepteurs de LH
     """
-    List_Hydro = []
+    List_Hbond = []
     for atome in ListAtom:
-        if re.search(self.Resid, ATOM_Hydro):
-            List_Hydro.append(atome)
+        if re.search(self.Nom, ATOM_Dnn) or re.search(self.Nom, ATOM_Acc):
+            if self.Resid=="PRO" and self.Nom!="N":
+            List_Hbond.append(atome)
 
     return List_Hydro
 
