@@ -1,8 +1,7 @@
 #! /usr/bin/env python3
 import sys
-import re
+import Atome as A
 
-#Projet Python M2, Parsing du fichier pdb #Module Liaisons Hydrophobes
 
 RESD_Hydro = ["ALA", "VAL", "LEU", "ILE", "MET", "PHE", "TRP", "PRO", "TYR"]
 ATOM_Dnn = ["N", "NE", "NE2", "NH1", "NH2", "ND1", "ND2", "NZ", "OH", "OG1"]
@@ -13,55 +12,18 @@ RESD_Aromtq = ["HIS", "PHE", "PRO", "TRP", "TYR"]
 ATOM_Cycle = ["ND1", "CE1", "NE2", "CD2", "CG", "N", "CA", "CB", "CD", "CD1" \
                 ,"CZ", "CE2", "NE1", "CZ2", "CH2", "CZ3", "CE3"] 
 
-#N est donneur de LH, excepté sur la proline qui n'en a pas
 #Pour les LH, faire la distance entre Le N et O moins la distance entre N et H
-
 
 pdbname = sys.argv[1]
 pdbfile = open(pdbname, 'r')
 
-#creer une classe des atomes avec les infos tirées du pdb
-#and re.search(infoATOM[3], ATOM_Hydro): pour selectionner les hydrophobes à partir d'une liste
-
-class Atom:
-    """
-    Ceci est la classe Atome
-    """
-    
-    def __init__(self, Num=0, Nom="CC", Resid="AAA", Chain="A", NumRes=0, 
-                    x=0.0, y=0.0, z=0.0):
-        """
-        definition des objts atome
-        """
-        self.Num=Num
-        self.Nom=Nom
-        self.Resid=Resid
-        self.Chain=Chain
-        self.NumRes=NumRes
-        self.x=x
-        self.y=y
-        self.z=z
-
-
-def Parse_and_Constructor(pdbfile):
-    """Récupère les coord et le type d'atome, de base et renvoie un dico"""
-    ListAtom = []
-    for line in pdbfile:
-        infoATOM = line.split()
-        if infoATOM[0] == "ATOM": 
-            atom=Atom(infoATOM[1], infoATOM[2], infoATOM[3], infoATOM[4], infoATOM[5], \
-                        infoATOM[6], infoATOM[7], infoATOM[8])
-            ListAtom.append(atom)
-
-    return ListAtom
-
-def Select_Hydro(ListAtom, RESD_hydro):
+def Select_Hydro(ListAtom, RESD_Hydro):
     """
     Sélectionne la liste des atomes succeptibles de créer des Liasons Hydrophobes
     """
     List_Hydro = []
     for atome in ListAtom:
-        if re.search(atome.Resid, RESD_Hydro):
+        if atome.Resid in RESD_Hydro and atome.Nom=="CA":
             List_Hydro.append(atome)
 
     return List_Hydro
@@ -83,7 +45,7 @@ def Select_Hbond(ListAtom, ATOM_Dnn, ATOM_Acc):
     """
     List_Hbond = []
     for atome in ListAtom:
-        if re.search(atome.Nom, ATOM_Dnn) or re.search(atome.Nom, ATOM_Acc):
+        if atome.Nom in ATOM_Dnn or atome.Nom in ATOM_Acc:
             if atome.Resid=="PRO" and atome.Nom=="N":
                 continue
             List_Hbond.append(atome)
@@ -97,7 +59,7 @@ def Select_ResIRESD_AromtqRESD_Aromtqon(ListAtom, RESD_IonPos, RESD_IonNeg):
     """
     List_ResIon = []
     for atome in ListAtom:
-        if re.search(atome.Resid, RESD_IonPos) or re.search(atome.Resid, RESD_IonNeg):
+        if atome.Resid in RESD_IonPos or atome.Resid in RESD_IonNeg:
             List_ResIon.append(atome)
 
     return List_ResIon
@@ -109,19 +71,86 @@ def Select_AtmCyc(ListAtom, RESD_Aromtq, ATOM_Cycle):
     """
     List_AtmCyc = []
     for atome in ListAtom:
-        if re.search(atome.Resid, RESD_Aromtq) and re.search(atome.Nom, ATOM_Cycle):
+        if atome.Resid in RESD_Aromtq and atome.Nom in ATOM_Cycle:
             List_AtmCyc.append(atome)
 
     return List_AtmCyc
 
+###########################################################
+# Fonction de calcul
+
+
+#Hydrophobe
+def Calc_Int_Hydro(List_Hydro):
+    """
+    Calcule les distances entre les carbones Apha des résidus hydrophobes
+    """
+    Hydrop = []
+    for at1 in List_Hydro:
+        for at2 in List_Hydro:
+            if round(((float(at1.x)-float(at2.x))**2 + (float(at1.y)-float(at2.y))**2 + \
+                (float(at1.z)-float(at2.z))**2)**0.5, 2) < 5.3 \
+                and round(((float(at1.x)-float(at2.x))**2 + (float(at1.y)-float(at2.y))**2 \
+                 + (float(at1.z)-float(at2.z))**2)**0.5, 2) > 0:
+                Hydrop.append([at1, at2])
+    return Hydrop
+
+
+
+
+ListAtom = A.Parse_and_Constructor(pdbfile)
+List_Hydro = Select_Hydro(ListAtom, RESD_Hydro)
+Hydrophobe = Calc_Int_Hydro(List_Hydro)
+
+#dblon = []
+#for Liste in Hydrophobe:
+#    if [Liste[0].Num, Liste[1].Num] in dblon:
+#        continue 
+#    print(Liste[0].Num, Liste[0].Resid, Liste[0].Chain, \
+#          Liste[1].Num, Liste[1].Resid, Liste[1].Chain )
+
+#    dblon.append([Liste[0].Num, Liste[1].Num])
+#    dblon.append([Liste[1].Num, Liste[0].Num])
+
+##########################################################
+#Ponts Disulfures
+
+def Calc_Pts_SS(List_SS):
+    """
+    Calcule les distances entre les carbones Apha des résidus hydrophobes
+    """
+    PontSS = []
+    for at1 in List_SS:
+        for at2 in List_SS:
+            if round(((float(at1.x)-float(at2.x))**2 + (float(at1.y)-float(at2.y))**2 + \
+                (float(at1.z)-float(at2.z))**2)**0.5, 2) < 2.2 \
+                and round(((float(at1.x)-float(at2.x))**2 + (float(at1.y)-float(at2.y))**2 \
+                 + (float(at1.z)-float(at2.z))**2)**0.5, 2) > 0:
+
+                dist = round(((float(at1.x)-float(at2.x))**2 + (float(at1.y)-float(at2.y))**2 + \
+                (float(at1.z)-float(at2.z))**2)**0.5, 2)
+                PontSS.append([at1, at2, dist])
+    return PontSS
+
+List_SS = Select_Disulfure(ListAtom)
+PontSS = Calc_Pts_SS(List_SS)
+
+dblon = []
+for Liste in PontSS:
+    if [Liste[0].Num, Liste[1].Num] in dblon:
+        continue 
+    print(Liste[0].Num, Liste[0].Resid, Liste[0].Chain, \
+          Liste[1].Num, Liste[1].Resid, Liste[1].Chain, Liste[2] )
+
+    dblon.append([Liste[0].Num, Liste[1].Num])
+    dblon.append([Liste[1].Num, Liste[0].Num])
 
 
 
 
 
-#ListAtom = Parse_and_Constructor(pdbfile)
-#for atome in ListAtom:
-#    print(atome.Resid)
+
+
 
 
     
