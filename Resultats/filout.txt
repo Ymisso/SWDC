@@ -1,0 +1,272 @@
+TYPE D'INTÉRACTION : Hydrophobe
+
+
+Numero Residu Chaine | Numero Résidu Chaine
+     2 ILE    A      |      3 VAL    A     
+    13 LEU    A      |     14 TYR    A     
+    13 LEU    A      |     16 LEU    A     
+     1 PHE    B      |      2 VAL    B     
+    11 LEU    B      |     12 VAL    B     
+    11 LEU    B      |     14 ALA    B     
+    12 VAL    B      |     15 LEU    B     
+    14 ALA    B      |     15 LEU    B     
+    14 ALA    B      |     17 LEU    B     
+    15 LEU    B      |     16 TYR    B     
+    15 LEU    B      |     18 VAL    B     
+    16 TYR    B      |     17 LEU    B     
+    17 LEU    B      |     18 VAL    B     
+    24 PHE    B      |     25 PHE    B     
+    25 PHE    B      |     26 TYR    B     
+    25 PHE    B      |     25 PHE    D     
+     2 ILE    C      |      3 VAL    C     
+    13 LEU    C      |     14 TYR    C     
+    13 LEU    C      |     16 LEU    C     
+     1 PHE    D      |      2 VAL    D     
+     6 LEU    D      |     11 LEU    D     
+    11 LEU    D      |     12 VAL    D     
+    11 LEU    D      |     14 ALA    D     
+    12 VAL    D      |     15 LEU    D     
+    14 ALA    D      |     15 LEU    D     
+    14 ALA    D      |     17 LEU    D     
+    15 LEU    D      |     16 TYR    D     
+    15 LEU    D      |     18 VAL    D     
+    16 TYR    D      |     17 LEU    D     
+    17 LEU    D      |     18 VAL    D     
+    24 PHE    D      |     25 PHE    D     
+    25 PHE    D      |     26 TYR    D     
+
+
+TYPE D'INTÉRACTION : Ponts Disulfure S-S
+
+
+Numero Residu Chaine | Numero Residu Chaine | Distance
+     6 CYS    A      |     11 CYS    A      |     2.03
+     7 CYS    A      |      7 CYS    B      |     2.02
+    20 CYS    A      |     19 CYS    B      |     2.07
+     6 CYS    C      |     11 CYS    C      |     1.99
+     7 CYS    C      |      7 CYS    D      |     2.02
+    20 CYS    C      |     19 CYS    D      |     2.07
+
+
+TYPE D'INTÉRACTION : Liaisons hydrogènes
+
+
+Numero Residu atm dnn Chaine | Numero Residu atm acc Chaine | Distance D-A
+     1 GLY    N       A      |      1 GLY    O       A      |         2.70
+     2 ILE    N       A      |      1 GLY    O       A      |         2.27
+     3 VAL    N       A      |      2 ILE    O       A      |         2.27
+     4 GLU    N       A      |      3 VAL    O       A      |         2.24
+     5 GLN    N       A      |      1 GLY    O       A      |         2.99
+     5 GLN    N       A      |      4 GLU    O       A      |         2.26
+     5 GLN    NE2     A      |      5 GLN    OE1     A      |         2.23
+     5 GLN    NE2     A      |     19 TYR    OH      A      |         2.44
+     6 CYS    N       A      |      2 ILE    O       A      |         2.87
+     6 CYS    N       A      |      5 GLN    O       A      |         2.24
+     6 CYS    N       A      |      6 CYS    SG      A      |         3.00
+     6 CYS    N       A      |     11 CYS    SG      A      |         3.85
+     7 CYS    N       A      |      6 CYS    O       A      |         2.26
+     7 CYS    N       A      |      7 CYS    SG      A      |         3.14
+     8 THR    N       A      |      7 CYS    O       A      |         2.24
+     8 THR    N       A      |      8 THR    OG1     A      |         2.99
+     9 SER    N       A      |      8 THR    O       A      |         2.25
+     9 SER    N       A      |      9 SER    O       A      |         2.52
+     9 SER    N       A      |      9 SER    OG      A      |         2.96
+    10 ILE    N       A      |      9 SER    O       A      |         2.24
+    10 ILE    N       A      |     10 ILE    O       A      |         2.76
+    11 CYS    N       A      |     10 ILE    O       A      |         2.25
+    11 CYS    N       A      |     11 CYS    O       A      |         2.75
+    11 CYS    N       A      |     11 CYS    SG      A      |         3.27
+    12 SER    N       A      |     11 CYS    O       A      |         2.24
+    12 SER    N       A      |     12 SER    O       A      |         2.67
+    12 SER    N       A      |     12 SER    OG      A      |         2.92
+    12 SER    N       A      |     15 GLN    OE1     A      |         2.80
+    13 LEU    N       A      |     12 SER    O       A      |         2.19
+    14 TYR    N       A      |     13 LEU    O       A      |         2.29
+    15 GLN    N       A      |     14 TYR    O       A      |         2.24
+    15 GLN    NE2     A      |     15 GLN    OE1     A      |         2.24
+    16 LEU    N       A      |     12 SER    O       A      |         2.92
+    16 LEU    N       A      |     15 GLN    O       A      |         2.32
+    17 GLU    N       A      |     16 LEU    O       A      |         2.19
+    18 ASN    N       A      |     17 GLU    O       A      |         2.29
+    18 ASN    ND2     A      |     18 ASN    OD1     A      |         2.17
+    19 TYR    N       A      |     16 LEU    O       A      |         2.96
+    19 TYR    N       A      |     18 ASN    O       A      |         2.28
+    20 CYS    N       A      |     19 TYR    O       A      |         2.28
+    20 CYS    N       A      |     20 CYS    O       A      |         2.61
+    20 CYS    N       A      |     20 CYS    SG      A      |         3.03
+    20 CYS    N       A      |     19 CYS    SG      B      |         3.86
+    21 ASN    N       A      |     20 CYS    O       A      |         2.30
+    21 ASN    N       A      |     23 GLY    O       B      |         2.91
+    21 ASN    ND2     A      |     21 ASN    OD1     A      |         2.30
+     1 PHE    N       B      |      1 PHE    O       B      |         2.73
+     2 VAL    N       B      |      1 PHE    O       B      |         2.24
+     2 VAL    N       B      |      2 VAL    O       B      |         2.77
+     3 ASN    N       B      |      2 VAL    O       B      |         2.29
+     3 ASN    N       B      |      3 ASN    O       B      |         2.96
+     3 ASN    ND2     B      |      3 ASN    OD1     B      |         2.24
+     4 GLN    N       B      |      2 VAL    O       B      |         2.99
+     4 GLN    N       B      |      3 ASN    O       B      |         2.30
+     4 GLN    NE2     B      |      4 GLN    OE1     B      |         2.26
+     5 HIS    N       B      |      3 ASN    OD1     B      |         2.99
+     5 HIS    N       B      |      4 GLN    O       B      |         2.31
+     6 LEU    N       B      |      3 ASN    OD1     B      |         2.97
+     6 LEU    N       B      |      5 HIS    O       B      |         2.26
+     7 CYS    N       B      |      3 ASN    O       B      |         2.95
+     7 CYS    N       B      |      6 LEU    O       B      |         2.27
+     7 CYS    N       B      |      7 CYS    SG      B      |         3.96
+     8 GLY    N       B      |      4 GLN    O       B      |         2.87
+     8 GLY    N       B      |      7 CYS    O       B      |         2.23
+     8 GLY    N       B      |      7 CYS    SG      B      |         3.96
+     9 SER    N       B      |      8 GLY    O       B      |         2.27
+    10 HIS    N       B      |      9 SER    O       B      |         2.25
+    11 LEU    N       B      |      7 CYS    O       B      |         2.88
+    11 LEU    N       B      |     10 HIS    O       B      |         2.21
+    12 VAL    N       B      |      8 GLY    O       B      |         2.95
+    12 VAL    N       B      |     11 LEU    O       B      |         2.30
+    13 GLU    N       B      |     12 VAL    O       B      |         2.24
+    14 ALA    N       B      |     10 HIS    O       B      |         2.93
+    14 ALA    N       B      |     13 GLU    O       B      |         2.32
+    15 LEU    N       B      |     11 LEU    O       B      |         2.75
+    15 LEU    N       B      |     14 ALA    O       B      |         2.26
+    16 TYR    N       B      |     12 VAL    O       B      |         2.96
+    16 TYR    N       B      |     15 LEU    O       B      |         2.26
+    17 LEU    N       B      |     16 TYR    O       B      |         2.28
+    18 VAL    N       B      |     14 ALA    O       B      |         2.89
+    18 VAL    N       B      |     17 LEU    O       B      |         2.30
+    19 CYS    N       B      |     20 CYS    SG      A      |         3.86
+    19 CYS    N       B      |     15 LEU    O       B      |         2.84
+    19 CYS    N       B      |     18 VAL    O       B      |         2.27
+    19 CYS    N       B      |     19 CYS    SG      B      |         3.11
+    20 GLY    N       B      |     19 CYS    O       B      |         2.21
+    20 GLY    N       B      |     20 GLY    O       B      |         2.88
+    21 GLU    N       B      |     20 GLY    O       B      |         2.29
+    22 ARG    N       B      |     21 GLU    O       B      |         2.26
+    23 GLY    N       B      |     22 ARG    O       B      |         2.25
+    23 GLY    N       B      |     23 GLY    O       B      |         2.88
+    24 PHE    N       B      |     23 GLY    O       B      |         2.23
+    24 PHE    N       B      |     24 PHE    O       B      |         2.71
+    24 PHE    N       B      |     26 TYR    O       D      |         2.99
+    25 PHE    N       B      |     24 PHE    O       B      |         2.24
+    25 PHE    N       B      |     25 PHE    O       B      |         2.71
+    26 TYR    N       B      |     25 PHE    O       B      |         2.26
+    26 TYR    N       B      |     26 TYR    O       B      |         2.84
+    26 TYR    N       B      |     24 PHE    O       D      |         2.93
+    27 THR    N       B      |     26 TYR    O       B      |         2.25
+    27 THR    N       B      |     27 THR    O       B      |         2.96
+    27 THR    OG1     B      |     27 THR    O       B      |         2.73
+    29 LYS    N       B      |     28 PRO    O       B      |         2.26
+    30 ALA    N       B      |     28 PRO    O       B      |         2.68
+    30 ALA    N       B      |     29 LYS    O       B      |         2.25
+    30 ALA    N       B      |     30 ALA    O       B      |         2.89
+     1 GLY    N       C      |      1 GLY    O       C      |         2.69
+     2 ILE    N       C      |      1 GLY    O       C      |         2.24
+     3 VAL    N       C      |      2 ILE    O       C      |         2.28
+     4 GLU    N       C      |      3 VAL    O       C      |         2.28
+     4 GLU    N       C      |      4 GLU    OE1     C      |         2.88
+     5 GLN    N       C      |      4 GLU    O       C      |         2.22
+     5 GLN    NE2     C      |      5 GLN    OE1     C      |         2.23
+     6 CYS    N       C      |      2 ILE    O       C      |         2.76
+     6 CYS    N       C      |      5 GLN    O       C      |         2.31
+     6 CYS    N       C      |      6 CYS    SG      C      |         3.14
+     6 CYS    N       C      |     11 CYS    SG      C      |         3.51
+     7 CYS    N       C      |      3 VAL    O       C      |         2.85
+     7 CYS    N       C      |      6 CYS    O       C      |         2.23
+     8 THR    N       C      |      3 VAL    O       C      |         2.85
+     8 THR    N       C      |      7 CYS    O       C      |         2.32
+     8 THR    N       C      |      7 CYS    SG      C      |         3.78
+     8 THR    N       C      |      8 THR    OG1     C      |         2.90
+     9 SER    N       C      |      8 THR    O       C      |         2.16
+     9 SER    N       C      |      9 SER    O       C      |         2.51
+     9 SER    N       C      |      9 BSER   OG      C      |         2.93
+    10 ILE    N       C      |      9 SER    O       C      |         2.23
+    10 ILE    N       C      |      9 ASER   OG      C      |         2.74
+    10 ILE    N       C      |     10 ILE    O       C      |         2.73
+    11 CYS    N       C      |     10 ILE    O       C      |         2.28
+    11 CYS    N       C      |     11 CYS    O       C      |         2.96
+    11 CYS    N       C      |     11 CYS    SG      C      |         3.39
+    12 SER    N       C      |     11 CYS    O       C      |         2.16
+    12 SER    N       C      |     12 SER    O       C      |         2.62
+    12 SER    N       C      |     12 SER    OG      C      |         2.92
+    13 LEU    N       C      |     12 SER    O       C      |         2.21
+    14 TYR    N       C      |     13 LEU    O       C      |         2.29
+    15 GLN    N       C      |     14 TYR    O       C      |         2.28
+    15 GLN    NE2     C      |     15 GLN    OE1     C      |         2.19
+    16 LEU    N       C      |     15 GLN    O       C      |         2.27
+    17 GLU    N       C      |     16 LEU    O       C      |         2.28
+    18 ASN    N       C      |     17 GLU    O       C      |         2.21
+    18 ASN    ND2     C      |     18 ASN    OD1     C      |         2.25
+    19 TYR    N       C      |     16 LEU    O       C      |         2.95
+    19 TYR    N       C      |     18 ASN    O       C      |         2.28
+    19 TYR    OH      C      |      5 GLN    OE1     C      |         2.48
+    20 CYS    N       C      |     19 TYR    O       C      |         2.17
+    20 CYS    N       C      |     20 CYS    O       C      |         2.56
+    20 CYS    N       C      |     20 CYS    SG      C      |         3.25
+    20 CYS    N       C      |     19 CYS    SG      D      |         3.86
+    21 ASN    N       C      |     20 CYS    O       C      |         2.28
+    21 ASN    N       C      |     21 ASN    O       C      |         2.74
+    21 ASN    N       C      |     23 GLY    O       D      |         2.99
+    21 ASN    ND2     C      |     21 ASN    OD1     C      |         2.23
+     1 PHE    N       D      |      1 PHE    O       D      |         2.65
+     2 VAL    N       D      |      1 PHE    O       D      |         2.23
+     2 VAL    N       D      |      2 VAL    O       D      |         2.61
+     3 ASN    N       D      |      2 VAL    O       D      |         2.29
+     3 ASN    ND2     D      |      3 ASN    OD1     D      |         2.28
+     4 GLN    N       D      |      3 ASN    O       D      |         2.25
+     4 GLN    N       D      |      4 GLN    O       D      |         2.64
+     4 GLN    NE2     D      |      4 GLN    OE1     D      |         2.30
+     5 HIS    N       D      |      4 GLN    O       D      |         2.30
+     5 HIS    N       D      |      5 HIS    O       D      |         2.74
+     5 HIS    ND1     D      |      7 CYS    O       C      |         2.93
+     6 LEU    N       D      |      5 HIS    O       D      |         2.31
+     6 LEU    N       D      |      6 LEU    O       D      |         2.94
+     7 CYS    N       D      |      6 LEU    O       D      |         2.28
+     7 CYS    N       D      |      7 CYS    O       D      |         2.75
+     7 CYS    N       D      |      7 CYS    SG      D      |         3.13
+     8 GLY    N       D      |      7 CYS    O       D      |         2.26
+     8 GLY    N       D      |      8 GLY    O       D      |         2.95
+     9 SER    N       D      |      8 GLY    O       D      |         2.24
+     9 SER    N       D      |      9 SER    OG      D      |         2.87
+    10 HIS    N       D      |      9 SER    O       D      |         2.29
+    11 LEU    N       D      |      8 GLY    O       D      |         2.99
+    11 LEU    N       D      |     10 HIS    O       D      |         2.29
+    12 VAL    N       D      |     11 LEU    O       D      |         2.31
+    13 GLU    N       D      |      9 SER    O       D      |         2.95
+    13 GLU    N       D      |     12 VAL    O       D      |         2.23
+    14 ALA    N       D      |     13 GLU    O       D      |         2.26
+    15 LEU    N       D      |     11 LEU    O       D      |         2.94
+    15 LEU    N       D      |     14 ALA    O       D      |         2.30
+    16 TYR    N       D      |     12 VAL    O       D      |         2.93
+    16 TYR    N       D      |     15 LEU    O       D      |         2.25
+    16 TYR    OH      D      |      5 HIS    O       B      |         2.68
+    17 LEU    N       D      |     16 TYR    O       D      |         2.29
+    18 VAL    N       D      |     14 ALA    O       D      |         2.85
+    18 VAL    N       D      |     17 LEU    O       D      |         2.23
+    19 CYS    N       D      |     15 LEU    O       D      |         2.86
+    19 CYS    N       D      |     18 VAL    O       D      |         2.36
+    19 CYS    N       D      |     19 CYS    SG      D      |         3.11
+    20 GLY    N       D      |     19 CYS    O       D      |         2.19
+    20 GLY    N       D      |     20 GLY    O       D      |         2.90
+    21 GLU    N       D      |     20 GLY    O       D      |         2.23
+    22 ARG    N       D      |     21 GLU    O       D      |         2.23
+    22 ARG    NH2     D      |     20 CYS    SG      C      |         3.53
+    23 GLY    N       D      |     22 ARG    O       D      |         2.28
+    23 GLY    N       D      |     23 GLY    O       D      |         2.65
+    24 PHE    N       D      |     23 GLY    O       D      |         2.18
+    24 PHE    N       D      |     24 PHE    O       D      |         2.72
+    25 PHE    N       D      |     24 PHE    O       D      |         2.30
+    25 PHE    N       D      |     25 PHE    O       D      |         2.71
+    26 TYR    N       D      |     24 PHE    O       B      |         2.79
+    26 TYR    N       D      |     25 PHE    O       D      |         2.27
+    26 TYR    N       D      |     26 TYR    O       D      |         2.92
+    27 THR    N       D      |     26 TYR    O       D      |         2.25
+    27 THR    N       D      |     27 THR    OG1     D      |         2.70
+    27 THR    OG1     D      |     27 THR    O       D      |         2.85
+    29 LYS    N       D      |     28 PRO    O       D      |         2.34
+    30 ALA    N       D      |     29 LYS    O       D      |         2.19
+    30 ALA    N       D      |     30 ALA    O       D      |         2.68
+
+
+TYPE D'INTÉRACTION : Ionique
+
+
+Numero Residu Chaine | Numero Residu Chaine |   Distance
